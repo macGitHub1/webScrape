@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Surfing Data</h1>
+            <p> Below is a list of wave data </p>
+
+        </div>
+        <div>
+	  <table style="width:100%">
+	    <th> Location </th>
+	    <th> Wave Height </th>
+	    <th> URL </th>
+            {% for surf in surfList %}
+             <tr>
+	     <td>{{surf.location}} </td>
+	     <td>{{surf.height}}</td>
+	     <td> URL for more data <a href= {{surf.url}}> click Here </a></td>
+	    </tr>
+             {% endfor %}
+	    </table>
+         </div>
+    </div>
+
+</body>
+
+</html>
